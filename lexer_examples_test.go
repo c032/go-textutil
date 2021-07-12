@@ -3,7 +3,7 @@ package textutil_test
 import (
 	"testing"
 
-	"git.wark.io/lib/textutil-go"
+	"github.com/c032/go-textutil"
 )
 
 func TestLex1(t *testing.T) {
