@@ -7,13 +7,15 @@ import (
 )
 
 func TestLex1(t *testing.T) {
-	tokens := textutil.Lex1("343 Guilty Spark. .. ... ....")
+	tokens := textutil.Lex1("3.14 Lorem ipsum. .. ... ....")
 	expectedTokens := [][2]string{
-		[2]string{"number", "343"},
+		[2]string{"number", "3"},
+		[2]string{"period", "."},
+		[2]string{"number", "14"},
 		[2]string{"space", " "},
-		[2]string{"letters", "Guilty"},
+		[2]string{"letters", "Lorem"},
 		[2]string{"space", " "},
-		[2]string{"letters", "Spark"},
+		[2]string{"letters", "ipsum"},
 		[2]string{"period", "."},
 
 		[2]string{"space", " "},
